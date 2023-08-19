@@ -24,4 +24,8 @@ class Bike extends Model
     {
         return $this->belongsTo(Owner::class);
     }
+    public function color()
+    {
+        return $this->belongsToMany(Color::class);
+    }
 }

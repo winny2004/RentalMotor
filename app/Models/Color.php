@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Color extends Model
 {
     use HasFactory;
+    protected $table = 'colors';
+    protected $fillable = [        
+        'name',
+    ];
 }
+
+public function motorbike()
+    {
+        return $this->belongsToMany(Motorbike::class);
+    }
