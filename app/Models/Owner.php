@@ -15,4 +15,8 @@ class Owner extends Model
         'room',
         'birth',
     ];
+    public function motorbikes()
+    {
+        return $this->hasMany(Motorbike::class);
+    }
 }
