@@ -11,7 +11,10 @@ class BikeController extends Controller
      */
     public function index()
     {
-        //
+        {
+            $motorbikes = Motorbike::all();
+            return view('motorbikes.index', compact('motorbikes'));
+        }
     }
 
     /**
@@ -19,7 +22,8 @@ class BikeController extends Controller
      */
     public function create()
     {
-        //
+        $brands = Brand::all();
+        return view('motorbikes.create', compact('brands'));
     }
 
     /**
@@ -27,7 +31,9 @@ class BikeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Car::create($request->all());
+
+        return redirect()->route('motorbikes.index');
     }
 
     /**
@@ -35,7 +41,8 @@ class BikeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $car = Car::find($id);
+        return view('motorbikes.show', compact('car'));
     }
 
     /**
@@ -43,7 +50,8 @@ class BikeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $car = Car::find($id);
+        return view('motorbikes.edit', compact('car'));
     }
 
     /**
@@ -51,7 +59,9 @@ class BikeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $car = Car::find($id);
+        $car->update($request->all());
+        return redirect()->route('motorbikes.index');
     }
 
     /**
@@ -59,6 +69,8 @@ class BikeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+            $car = Car::find($id);
+        $car->delete();
+        return redirect()->route('motorbikes.index');
     }
 }
