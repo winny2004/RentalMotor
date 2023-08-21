@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\MotorbikeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.app');
 });
-
+Route::resource('/motorbike', MotorbikeController::class);
+Route::resource('/brand', BrandController::class);
