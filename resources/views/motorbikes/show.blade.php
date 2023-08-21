@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('title', 'Details for ID ' . $motorbike->id)
+@section('title', 'Details for ID ' . $motorbikes->id)
 @section('content')
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>Details for ID {{ $motorbike->id }}</h1>
+      <h1>Details for ID {{ $motorbikes->id }}</h1>
       <p><a href="{{ route('motorbikes.index') }}">Back to all motorbikes</a></p>
       <table class="table table-striped">
         <tbody>
