@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models/Owner;
 class OwnerController extends Controller
 {
     /**
@@ -11,8 +11,8 @@ class OwnerController extends Controller
      */
     public function index()
     {
-        $owners = Owner::all();
-        return view('owners.index', compact('owners'));
+        $owner = Owner::all();
+        return view('owners.index', ['owners' => $owner]);
     }
 
     /**
@@ -20,8 +20,7 @@ class OwnerController extends Controller
      */
     public function create()
     {
-        $brands = Brand::all();
-        return view('owners.create', compact('brands'));
+        return view('owners.create');
     }
 
     /**
@@ -29,7 +28,7 @@ class OwnerController extends Controller
      */
     public function store(Request $request)
     {
-        Car::create($request->all());
+        Owner::create($request->all());
 
         return redirect()->route('owners.index');
     }
@@ -39,8 +38,8 @@ class OwnerController extends Controller
      */
     public function show(string $id)
     {
-        $car = Car::find($id);
-        return view('owners.show', compact('car'));
+        $owner = Owner::find($id);
+        return view('owners.show', ['owners' => $owner]);
     }
 
     /**
@@ -48,8 +47,8 @@ class OwnerController extends Controller
      */
     public function edit(string $id)
     {
-        $car = Car::find($id);
-        return view('owners.edit', compact('car'));
+        $owner = Owner::find($id);
+        return view('owners.edit', ['owners' => $owner]);
     }
 
     /**
@@ -57,8 +56,8 @@ class OwnerController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $car = Car::find($id);
-        $car->update($request->all());
+        $owner = Owner::find($id);
+        $owner->update($request->all());
         return redirect()->route('owners.index');
     }
 
@@ -67,8 +66,8 @@ class OwnerController extends Controller
      */
     public function destroy(string $id)
     {
-        $car = Car::find($id);
-        $car->delete();
+        $owner = Owner::find($id);
+        $owner->delete();
         return redirect()->route('owners.index');
     }
     }

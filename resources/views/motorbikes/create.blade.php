@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-12">
       <h1>Add New Car</h1>
-      <form action="{{ route('motorbikes.store') }}" method="POST">
+      <form action="{'motorbike.store'}" method="POST">
         @csrf
         <div class="form-group">
           <div class="mb-3">
@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="form-group">
-        <label for="" class="form-label">Owner</label>
+        <label for="owner_id" class="form-label">Owner</label>
             <select class="form-select form-select-lg" name="owner_id" id="owner_id">
               @foreach ($owners as $owner)
               <option value="{{ $owner->id }}">{{ $owner->name }}</option>
@@ -28,10 +28,6 @@
         <div class="form-group">
           <label>Year</label>
           <input type="text" class="form-control" name="year" placeholder="Enter year">
-        </div>
-        <div class="form-group">
-          <label>Plate</label>
-          <input type="text" class="form-control" name="year" placeholder="Enter plate">
         </div>
         <label for="colors">Colors</label>
     <select name="colors[]" id="colors" multiple>

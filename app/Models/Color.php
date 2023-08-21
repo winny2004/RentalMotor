@@ -14,7 +14,7 @@ class Color extends Model
     ];
 }
 
-public function motorbike()
+public function motorbikes()
     {
         return $this->belongsToMany(Motorbike::class);
     }

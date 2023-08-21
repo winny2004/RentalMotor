@@ -12,8 +12,8 @@ class MotorbikeController extends Controller
     public function index()
     {
       
-            $motorbikes = Motorbike::all();
-            return view('motorbikes.index', compact('motorbikes'));
+            $motorbike = Motorbike::all();
+            return view('motorbikes.index', ['motorbikes' => $motorbike]);
       
     }
 
@@ -22,8 +22,8 @@ class MotorbikeController extends Controller
      */
     public function create()
     {
-        $brands = Brand::all();
-        return view('motorbikes.create', compact('brands'));
+        $brand = Brand::all();
+        return view('motorbikes.create', ['brands' => $brand]);
     }
 
     /**
@@ -42,7 +42,7 @@ class MotorbikeController extends Controller
     public function show(string $id)
     {
         $motorbike = Motorbike::find($id);
-        return view('motorbikes.show', compact('motorbikes'));
+        return view('motorbikes.show',['motorbikes' => $motorbike]);
     }
 
     /**
@@ -51,7 +51,7 @@ class MotorbikeController extends Controller
     public function edit(string $id)
     {
         $motorbike = Motorbike::find($id);
-        return view('motorbikes.edit', compact('motorbikes'));
+        return view('motorbikes.edit',['motorbikes' => $motorbike]);
     }
 
     /**
