@@ -18,6 +18,7 @@ use App\Http\Controllers\ColorController;
 Route::get('/', function () {
     return view('layouts.app');
 });
-Route::resource('/motorbike', MotorbikeController::class);
-Route::resource('/brand', BrandController::class);
-Route::resource('/color', ColorController::class);
+Route::resource('/motorbikes', MotorbikeController::class);
+Route::resource('/brands', BrandController::class);
+Route::resource('/colors', ColorController::class);
+Route::resource('/owners', ColorController::class);
