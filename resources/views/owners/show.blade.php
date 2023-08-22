@@ -9,23 +9,23 @@
         <tbody>
           <tr>
             <th>ID</th>
-            <td>{{ $owner->id }}</td>
+            <td>{{ $owners->id }}</td>
           </tr>
           <tr>
             <th>Name</th>
-            <td>{{ $owner->name }}</td>
+            <td>{{ $owners->name }}</td>
           </tr>
           <tr>
             <th>Idcard</th>
-            <td>{{ $owner->idcard}}</td>
+            <td>{{ $owners->idcard}}</td>
           </tr>
           <tr>
             <th>Room</th>
-            <td>{{ $owner->room}}</td>
+            <td>{{ $owners->room}}</td>
           </tr>
           <tr>
             <th>Birth</th>
-            <td>{{ $owner->birth }}</td>
+            <td>{{ $owners->birth }}</td>
           </tr>
         </tbody>
       </table>

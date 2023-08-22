@@ -28,8 +28,12 @@ class OwnerController extends Controller
      */
     public function store(Request $request)
     {
-        Owner::create($request->all());
-
+        $owner = new Owner();
+        $owner->name=$request->name;
+        $owner->idcard=$request->idcard;
+        $owner->room=$request->room;
+        $owner->birth=$request->birth;
+        $owner->save();
         return redirect()->route('owners.index');
     }
 
@@ -57,7 +61,11 @@ class OwnerController extends Controller
     public function update(Request $request, string $id)
     {
         $owner = Owner::find($id);
-        $owner->update($request->all());
+        $owner->name=$request->name;
+        $owner->idcard=$request->idcard;
+        $owner->room=$request->room;
+        $owner->birth=$request->birth;
+        $owner->save();
         return redirect()->route('owners.index');
     }
 

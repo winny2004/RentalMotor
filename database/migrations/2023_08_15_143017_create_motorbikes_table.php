@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('motorbikes', function (Blueprint $table) {
             $table->id();
             $table->foreignId('brand_id')->constrained()->onDelete('cascade');
-            $table->foreignId('color_id')->constrained()->onDelete('cascade');
             $table->foreignId('owner_id')->constrained()->onDelete('cascade');
             $table->string('year')->nullable();
             $table->string('plate')->nullable();

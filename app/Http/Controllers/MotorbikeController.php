@@ -13,10 +13,8 @@ class MotorbikeController extends Controller
      */
     public function index()
     {
-            $color = Color::all();
-            $owner = Owner::all();
             $motorbike = Motorbike::all();
-            return view('motorbikes.index', ['motorbikes' => $motorbike, 'colors' => $color, 'owners' =>$owner]);
+            return view('motorbikes.index', ['motorbikes' => $motorbike]);
       
     }
 
@@ -36,13 +34,14 @@ class MotorbikeController extends Controller
      */
     public function store(Request $request)
     {
-        $motorbike = new Motorbike;
+        $motorbike = new Motorbike();
         $motorbike->brand_id=$request->brand_id;
         $motorbike->owner_id=$request->owner_id;
+        $motorbike->color_id=$request->color_id;
         $motorbike->year=$request->year;
         $motorbike->plate=$request->plate;
         $motorbike->save();
-        $motorbike->motorbikes()->attach($request->motorbikes);
+        $motorbike->colors()->attach($request->colors);
         return redirect()->route('motorbikes.index');
     }
 
@@ -72,7 +71,12 @@ class MotorbikeController extends Controller
     public function update(Request $request, string $id)
     {
         $motorbike = Motorbike::find($id);
-        $motorbike->update($request->all());
+        $motorbike->brand_id=$request->brand_id;
+        $motorbike->owner_id=$request->owner_id;
+        $motorbike->year=$request->year;
+        $motorbike->plate=$request->plate;
+        $motorbike->save();
+        $motorbike->colors()->attach($request->colors);
         return redirect()->route('motorbikes.index');
     }
 

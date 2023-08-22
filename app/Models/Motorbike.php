@@ -11,7 +11,7 @@ class Motorbike extends Model
     protected $table = 'motorbikes';
     protected $fillable = [        
         'brand_id',
-        'color',
+        'color_id',
         'owner_id',
         'year',
         'plate',
@@ -24,7 +24,7 @@ class Motorbike extends Model
     {
         return $this->belongsTo(Owner::class);
     }
-    public function color()
+    public function colors()
     {
         return $this->belongsToMany(Color::class);
     }

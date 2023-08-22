@@ -13,6 +13,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Idcard</th>
             <th>Room</th>
@@ -25,6 +26,8 @@
             <td>{{ $owner->id }}</td>
             <td>{{ $owner->name }}</td>
             <td>{{ $owner->idcard }}</td>
+            <td>{{ $owner->room }}</td>
+            <td>{{ $owner->birth }}</td>
             <td>
               <a href="{{ route('owners.show', $owner->id) }}" class="btn btn-info">Details</a>
               <a href="{{ route('owners.edit', $owner->id) }}" class="btn btn-primary">Edit</a>
