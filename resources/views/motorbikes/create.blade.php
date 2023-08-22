@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-12">
       <h1>Add New Car</h1>
-      <form action="{'cars.store'}" method="POST">
+      <form action="{'motorbikes.store'}" method="POST">
         @csrf
                <div class="form-group">
           <div class="mb-3">
@@ -43,7 +43,7 @@
           <label>Plate</label>
           <input type="text" class="form-control" name="plate" placeholder="Enter plate">
         </div>
-        
+
         <button type="submit" class="btn btn-primary">Add New Car</button>
       </form>
     </div>
