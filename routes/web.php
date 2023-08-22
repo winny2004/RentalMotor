@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::resource('/motorbike', MotorbikeController::class);
 Route::resource('/brand', BrandController::class);
 Route::resource('/color', ColorController::class);
+Route::resource('/owner', ColorController::class);
