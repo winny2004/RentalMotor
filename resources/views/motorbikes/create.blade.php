@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Add New Car')
+@section('title', 'Add New Motorbike')
 @section('content')
 <div class="container">
   <div class="row">
@@ -11,7 +11,7 @@
           <div class="mb-3">
             <label for="" class="form-label">Owner</label>
             <select class="form-select form-select-lg" name="owner" id="owner">
-              @foreach ($brands as $brand)
+              @foreach ($owners as $owner)
               <option value="{{ $owner->id }}">{{ $owner->name }}</option>
               @endforeach
             </select>
