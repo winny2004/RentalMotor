@@ -5,12 +5,12 @@
   <div class="row">
     <div class="col-12">
       <h1>Add New Car</h1>
-      <form action="{'motorbikes.store'}" method="POST">
+      <form action="{{ route('motorbikes.store') }}" method="POST">
         @csrf
                <div class="form-group">
           <div class="mb-3">
             <label for="" class="form-label">Owner</label>
-            <select class="form-select form-select-lg" name="owner" id="owner">
+            <select class="form-select form-select-lg" name="owner_id" id="owner_id">
               @foreach ($owners as $owner)
               <option value="{{ $owner->id }}">{{ $owner->name }}</option>
               @endforeach

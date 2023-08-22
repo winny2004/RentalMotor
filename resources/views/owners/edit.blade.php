@@ -6,7 +6,6 @@
     <div class="col-12">
       <h1>Edit Owner</h1>
       <form action="/owners/{{ $owners->id }}" method="POST">
-      <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
         @csrf
         @method('PUT')
         <div class="form-group">

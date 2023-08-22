@@ -36,8 +36,13 @@ class MotorbikeController extends Controller
      */
     public function store(Request $request)
     {
-        Motorbike::create($request->all());
-
+        $motorbike = new Motorbike;
+        $motorbike->brand_id=$request->brand_id;
+        $motorbike->owner_id=$request->owner_id;
+        $motorbike->year=$request->year;
+        $motorbike->plate=$request->plate;
+        $motorbike->save();
+        $motorbike->motorbikes()->attach($request->motorbikes);
         return redirect()->route('motorbikes.index');
     }
 
