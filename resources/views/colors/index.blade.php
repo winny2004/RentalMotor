@@ -7,6 +7,8 @@
       <h1>Colors</h1>
       <p>
         <a href="{{ route('colors.create') }}" class="btn btn-success">Add New color</a>
+        <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
+
       </p>
       <table class="table table-striped">
         <thead>

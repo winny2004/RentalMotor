@@ -9,6 +9,7 @@
         <a href="/motorbikes/create" class="btn btn-success">Add New Motorbike</a>
         <a href="/brands" class="btn btn-success">Brand</a>
         <a href="/colors" class="btn btn-success">Color</a>
+        <a href="/owners" class="btn btn-success">Owner</a>
       </p>
       <table class="table table-striped">
         <thead>

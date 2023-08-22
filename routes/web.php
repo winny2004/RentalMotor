@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\MotorbikeController;
 use App\Http\Controllers\ColorController;
+use App\Http\Controllers\OwnerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,5 +23,5 @@ Route::get('/', function () {
 Route::resource('/motorbikes', MotorbikeController::class);
 Route::resource('/brands', BrandController::class);
 Route::resource('/colors', ColorController::class);
-Route::resource('/owners', ColorController::class);
+Route::resource('/owners', OwnerController::class);
 

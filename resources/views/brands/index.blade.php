@@ -7,6 +7,8 @@
       <h1>Brands</h1>
       <p>
         <a href="{{ route('brands.create') }}" class="btn btn-success">Add New brand</a>
+        <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
+
       </p>
       <table class="table table-striped">
         <thead>

@@ -5,24 +5,25 @@
   <div class="row">
     <div class="col-12">
       <h1>Edit Owner</h1>
-      <form action="/owners/{{ $owner->id }}" method="POST">
+      <form action="/owners/{{ $owners->id }}" method="POST">
+      <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
         @csrf
         @method('PUT')
         <div class="form-group">
           <label>Name</label>
-          <input type="text" class="form-control" name="name" placeholder="Enter name" value="{{$owner->name}}">
+          <input type="text" class="form-control" name="name" placeholder="Enter name" value="{{$owners->name}}">
         </div>
         <div class="form-group">
           <label>Idcard</label>
-          <input type="text" class="form-control" name="idcard" placeholder="Enter idcard" value="{{$owner->idcard}}">
+          <input type="text" class="form-control" name="idcard" placeholder="Enter idcard" value="{{$owners->idcard}}">
         </div>
         <div class="form-group">
           <label>Room</label>
-          <input type="text" class="form-control" name="room" placeholder="Enter room" value="{{$owner->room}}">
+          <input type="text" class="form-control" name="room" placeholder="Enter room" value="{{$owners->room}}">
         </div>
         <div class="form-group">
           <label>Birth</label>
-          <input type="text" class="form-control" name="birth" placeholder="Enter birth" value="{{$owner->birth}}">
+          <input type="text" class="form-control" name="birth" placeholder="Enter birth" value="{{$owners->birth}}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

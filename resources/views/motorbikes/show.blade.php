@@ -4,33 +4,33 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>Details for ID</h1>
+
       <p><a href="{'motorbikes.index'}">Back to all motorbikes</a></p>
       <table class="table table-striped">
         <tbody>
           <tr>
             <th>ID</th>
-            <td>{{ $motorbike->id }}</td>
+            <td>{{ $motorbikes->id }}</td>
           </tr>
           <tr>
             <th>Brand</th>
-            <td>{{ $motorbike->brand }}</td>
+            <td>{{ $motorbikes->brand }}</td>
           </tr>
           <tr>
             <th>Model</th>
-            <td>{{ $motorbike->owner }}</td>
+            <td>{{ $motorbikes->owner }}</td>
           </tr>
           <tr>
             <th>Year</th>
-            <td>{{ $motorbike->year }}</td>
+            <td>{{ $motorbikes->year }}</td>
           </tr>
           <tr>
             <th>Color</th>
-            <td>{{ $motorbike->color }}</td>
+            <td>{{ $motorbikes->color }}</td>
           </tr>
           <tr>
             <th>Plate</th>
-            <td>{{ $motorbike->plate }}</td>
+            <td>{{ $motorbikes->plate }}</td>
           </tr>
         </tbody>
       </table>

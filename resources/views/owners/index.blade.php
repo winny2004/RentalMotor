@@ -6,7 +6,9 @@
     <div class="col-12">
       <h1>Owners</h1>
       <p>
-        <a href="/owner/create" class="btn btn-success">Add New Owner</a>
+        <a href="{{ route('owners.create') }}" class="btn btn-success">Add New Owner</a>
+        <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
+
       </p>
       <table class="table table-striped">
         <thead>

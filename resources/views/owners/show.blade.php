@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <p><a href="{{ route('owners.index') }}">Back to all owners</a></p>
+      <p><a href="/owners/index">Back to all owners</a></p>
       <table class="table table-striped">
         <tbody>
           <tr>
