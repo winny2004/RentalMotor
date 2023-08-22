@@ -12,9 +12,10 @@ class Color extends Model
     protected $fillable = [        
         'name',
     ];
-}
-
-public function motorbikes()
+    public function motorbikes()
     {
         return $this->belongsToMany(Motorbike::class);
     }
+}
+
+

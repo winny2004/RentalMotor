@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Motorbike;
+use App\Models\Color;
+use App\Models\Owner;
 class MotorbikeController extends Controller
 {
     /**
@@ -11,9 +13,10 @@ class MotorbikeController extends Controller
      */
     public function index()
     {
-      
+            $color = Color::all();
+            $owner = Owner::all();
             $motorbike = Motorbike::all();
-            return view('motorbikes.index', ['motorbikes' => $motorbike]);
+            return view('motorbikes.index', ['motorbikes' => $motorbike, 'colors' => $color, 'owners' =>$owner]);
       
     }
 
@@ -22,8 +25,10 @@ class MotorbikeController extends Controller
      */
     public function create()
     {
+        $color = Color::all();
+        $owner = Owner::all();
         $brand = Brand::all();
-        return view('motorbikes.create', ['brands' => $brand]);
+        return view('motorbikes.create', ['brands' => $brand, 'colors' => $color, 'owners' =>$owner]);
     }
 
     /**
@@ -50,8 +55,10 @@ class MotorbikeController extends Controller
      */
     public function edit(string $id)
     {
+        $color = Color::all();
+        $owner = Owner::all();
         $motorbike = Motorbike::find($id);
-        return view('motorbikes.edit',['motorbikes' => $motorbike]);
+        return view('motorbikes.edit',['motorbikes' => $motorbike, 'colors' => $color, 'owners' =>$owner]);
     }
 
     /**

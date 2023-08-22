@@ -6,7 +6,7 @@
     <div class="col-12">
       <h1>Motorbikes</h1>
       <p>
-        <a href="{'motorbikes.create'}" class="btn btn-success">Add New Motorbike</a>
+        <a href="/motorbike/create" class="btn btn-success">Add New Motorbike</a>
       </p>
       <table class="table table-striped">
         <thead>
