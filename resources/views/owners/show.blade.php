@@ -4,6 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
+    <h1>Details for Owner</h1>
       <p><a href="/owners/index">Back to all owners</a></p>
       <table class="table table-striped">
         <tbody>

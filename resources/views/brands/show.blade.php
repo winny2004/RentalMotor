@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>Details for {{ $brand->name }}</h1>
+      <h1>Details for Brand</h1>
       <p><a href="{{ route('brands.index') }}">Back to all brands</a></p>
       <table class="table table-striped">
         <tbody>

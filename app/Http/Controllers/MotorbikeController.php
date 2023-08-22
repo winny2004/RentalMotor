@@ -37,7 +37,6 @@ class MotorbikeController extends Controller
         $motorbike = new Motorbike();
         $motorbike->brand_id=$request->brand_id;
         $motorbike->owner_id=$request->owner_id;
-        $motorbike->color_id=$request->color_id;
         $motorbike->year=$request->year;
         $motorbike->plate=$request->plate;
         $motorbike->save();
@@ -61,8 +60,9 @@ class MotorbikeController extends Controller
     {
         $color = Color::all();
         $owner = Owner::all();
+        $brand = Brand::all();
         $motorbike = Motorbike::find($id);
-        return view('motorbikes.edit',['motorbikes' => $motorbike, 'colors' => $color, 'owners' =>$owner]);
+        return view('motorbikes.edit',['motorbikes' => $motorbike,'brands' => $brand, 'colors' => $color, 'owners' =>$owner]);
     }
 
     /**
