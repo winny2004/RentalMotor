@@ -5,7 +5,8 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\MotorbikeController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\OwnerController;
-/*
+use App\Http\Controllers\AuthenticateController;
+/*use App\Http\Controllers\AuthenticateController;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -25,3 +26,12 @@ Route::resource('/brands', BrandController::class);
 Route::resource('/colors', ColorController::class);
 Route::resource('/owners', OwnerController::class);
 
+Route::get('login', [AuthenticateController::class, 'loginIndex'])->name('login');
+
+Route::post('login', [AuthenticateController::class, 'login']);
+
+Route::get('register', [AuthenticateController::class, 'registerIndex'])->name('register');
+
+Route::post('register', [AuthenticateController::class, 'register']);
+
+Route::get('logout', [AuthenticateController::class, 'logout'])->name('logout');

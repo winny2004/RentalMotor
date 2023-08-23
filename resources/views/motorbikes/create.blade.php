@@ -6,6 +6,9 @@
     <div class="col-12">
       <h1>Add New Car</h1>
       <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
+      <a href="/brands" class="btn btn-success">Brand</a>
+        <a href="/colors" class="btn btn-success">Color</a>
+        <a href="/owners" class="btn btn-success">Owner</a>
       <form action="{{ route('motorbikes.store') }}" method="POST">
         @csrf
                <div class="form-group">

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Details for ID ' )
+@section('title', 'Details' )
 @section('content')
 <div class="container">
   <div class="row">
@@ -26,7 +26,9 @@
           </tr>
           <tr>
             <th>Color</th>
-            <td>{{ $motorbikes->color }}</td>
+            <td> @foreach($motorbikes->colors as $color)
+                    <a href="/colors/{{$color->id}}">{{ $color->name }}</a>
+                @endforeach</td>
           </tr>
           <tr>
             <th>Plate</th>

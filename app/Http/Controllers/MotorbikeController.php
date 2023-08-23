@@ -23,6 +23,9 @@ class MotorbikeController extends Controller
      */
     public function create()
     {
+        if (!auth()->check()) {
+            return redirect('/login');
+        }
         $color = Color::all();
         $owner = Owner::all();
         $brand = Brand::all();
@@ -90,4 +93,5 @@ class MotorbikeController extends Controller
         $motorbike->delete();
         return redirect()->route('motorbikes.index');
     }
+
 }
