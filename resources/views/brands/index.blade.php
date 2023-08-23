@@ -14,8 +14,8 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Brand</th>
-            <th>Model</th>
+            <th>Name</th>
+            <th>founded</th>
             <th>Year</th>
             <th>Actions</th>
           </tr>
@@ -25,7 +25,7 @@
           <tr>
             <td>{{ $brand->id }}</td>
             <td>{{ $brand->name }}</td>
-            <td>{{ $brand->model }}</td>
+            <td>{{ $brand->founded }}</td>
             <td>{{ $brand->year }}</td>
             <td>
               <a href="{{ route('brands.show', $brand->id) }}" class="btn btn-info">Details</a>

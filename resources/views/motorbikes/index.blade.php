@@ -20,17 +20,23 @@
             <th>Color</th>
             <th>Year</th>
             <th>Plate</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           @foreach($motorbikes as $motorbike)
           <tr>
             <td>{{ $motorbike->id }}</td>
-            <td>{{ $motorbike->brand->name }}</td>
-            <td>{{ $motorbike->owner->name }}</td>
-            <td>{{ $motorbike->color->name }}</td>
+            <td><a href="/brands/{{$motorbike->brand->id}}">{{ $motorbike->brand->name }}</a></td>
+            <td><a href="/owners/{{$motorbike->owner->id}}">{{ $motorbike->owner->name }}</a></td>
+            <td>
+                @foreach($motorbike->colors as $color)
+                    <a href="/colors/{{$color->id}}">{{ $color->name }}</a>
+                @endforeach
+            </td>
             <td>{{ $motorbike->year }}</td>
             <td>{{ $motorbike->plate }}</td>
+            
             <td>
               <a href="{{ route('motorbikes.show', $motorbike->id) }}" class="btn btn-info">Details</a>
               <a href="{{ route('motorbikes.edit', $motorbike->id) }}" class="btn btn-primary">Edit</a>

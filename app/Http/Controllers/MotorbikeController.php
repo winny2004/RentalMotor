@@ -42,6 +42,7 @@ class MotorbikeController extends Controller
         $motorbike->save();
         $motorbike->colors()->attach($request->colors);
         return redirect()->route('motorbikes.index');
+        
     }
 
     /**
@@ -76,7 +77,7 @@ class MotorbikeController extends Controller
         $motorbike->year=$request->year;
         $motorbike->plate=$request->plate;
         $motorbike->save();
-        $motorbike->colors()->attach($request->colors);
+        $motorbike->colors()->sync($request->colors);
         return redirect()->route('motorbikes.index');
     }
 

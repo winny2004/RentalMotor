@@ -18,11 +18,11 @@
         </div>
         <div class="form-group">
           <label>Founded</label>
-          <input type="text" class="form-control" name="founded" placeholder="Enter founded Year" value="{{$brand->founded}}">
+          <input type="text" class="form-control" name="founded" placeholder="Enter founded" value="{{$brand->founded}}">
         </div>
         <div class="form-group">
-          <label>Logo</label>
-          <input type="text" class="form-control" name="logo" placeholder="Enter logo" value="{{$brand->logo}}">
+          <label>Year</label>
+          <input type="text" class="form-control" name="year" placeholder="Enter year" value="{{$brand->year}}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

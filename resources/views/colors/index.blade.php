@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>Colors</h1>
+      <h1>Color</h1>
       <p>
         <a href="{{ route('colors.create') }}" class="btn btn-success">Add New color</a>
         <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
@@ -15,6 +15,7 @@
           <tr>
             <th>ID</th>
             <th>Color</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>

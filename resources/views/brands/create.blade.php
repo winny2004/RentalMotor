@@ -5,6 +5,7 @@
   <div class="row">
     <div class="col-12">
       <h1>Add New Brand</h1>
+      <p><a href="{{ route('brands.index') }}">Back to all brands</a></p>
       <form action="{{ route('brands.store') }}" method="POST">
         @csrf
         <div class="form-group">
@@ -17,11 +18,11 @@
         </div>
         <div class="form-group">
           <label>Founded</label>
-          <input type="text" class="form-control" name="founded" placeholder="Enter founded Year">
+          <input type="text" class="form-control" name="founded" placeholder="Enter founded">
         </div>
         <div class="form-group">
-          <label>Logo</label>
-          <input type="text" class="form-control" name="logo" placeholder="Enter logo">
+          <label>Year</label>
+          <input type="text" class="form-control" name="year" placeholder="Enter year">
         </div>
 
         <button type="submit" class="btn btn-primary">Add New Brand</button>

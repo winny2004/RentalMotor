@@ -14,11 +14,11 @@
           </tr>
           <tr>
             <th>Brand</th>
-            <td>{{ $motorbikes->brand }}</td>
+            <td>{{ $motorbikes->brand->name }}</td>
           </tr>
           <tr>
             <th>Model</th>
-            <td>{{ $motorbikes->owner }}</td>
+            <td>{{ $motorbikes->owner->name }}</td>
           </tr>
           <tr>
             <th>Year</th>

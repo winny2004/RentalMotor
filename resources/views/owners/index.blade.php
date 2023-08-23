@@ -18,6 +18,7 @@
             <th>Idcard</th>
             <th>Room</th>
             <th>Birth</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>

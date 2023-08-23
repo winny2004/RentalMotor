@@ -13,7 +13,7 @@ class Brand extends Model
         'name',
         'country',
         'founded',
-        'logo',
+        'year',
     ];
     public function motorbikes()
     {

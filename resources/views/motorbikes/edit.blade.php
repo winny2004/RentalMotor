@@ -5,28 +5,39 @@
   <div class="row">
     <div class="col-12">
       <h1>Edit Motorbike</h1>
-      <form action="/motorbikes/{{ $motorbike->id }}" method="POST">
+      <a href="/motorbikes" class="btn btn-success">Back All Motorbike</a>
+      <form action="/motorbikes/{{ $motorbikes->id }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="form-group">
-          <label>Brand</label>
-          <input type="text" class="form-control" name="brand" placeholder="Enter brand" value="{{$motorbike->brand}}">
-        </div>
-        <div class="form-group">
-          <label>Owner</label>
-          <input type="text" class="form-control" name="owner" placeholder="Enter owner" value="{{$motorbike->owner}}">
-        </div>
+        <label for="brand_id">Brand</label>
+    <select name="brand_id" id="brand_id">
+        @foreach($brands as $brand)
+            <option value="{{$brand->id}}" >{{$brand->name}}</option>
+        @endforeach
+    </select>
+    <br>
+        <label for="owner_id">Owner</label>
+    <select name="owner_id" id="owner_id">
+        @foreach($owners as $owner)
+            <option value="{{$owner->id}}" >{{$owner->name}}</option>
+        @endforeach
+    </select>
+    <br>
         <div class="form-group">
           <label>Year</label>
-          <input type="text" class="form-control" name="year" placeholder="Enter year" value="{{$motorbike->year}}">
+          <input type="text" class="form-control" name="year" placeholder="Enter year" value="{{$motorbikes->year}}">
         </div>
-        <div class="form-group">
-          <label>Color</label>
-          <input type="text" class="form-control" name="color" placeholder="Enter color" value="{{$motorbike->color}}">
-        </div>
+        <br>  
+        <label for="colors">Color</label>
+    <select name="colors[]" id="colors" multiple>
+        @foreach($colors as $color)
+            <option value="{{$color->id}}" >{{$color->name}}</option>
+        @endforeach
+    </select>
+    <br>
         <div class="form-group">
           <label>Plate</label>
-          <input type="text" class="form-control" name="plate" placeholder="Enter plate" value="{{$motorbike->plate}}">
+          <input type="text" class="form-control" name="plate" placeholder="Enter plate" value="{{$motorbikes->plate}}">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

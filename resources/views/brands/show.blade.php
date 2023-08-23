@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Details for ID ' . $brand->name)
+@section('title', 'Details ')
 @section('content')
 <div class="container">
   <div class="row">
@@ -26,7 +26,7 @@
           </tr>
           <tr>
             <th>Logo</th>
-            <td>{{ $brand->logo }}</td>
+            <td>{{ $brand->year }}</td>
           </tr>
         </tbody>
       </table>

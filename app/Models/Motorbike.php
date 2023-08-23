@@ -11,7 +11,6 @@ class Motorbike extends Model
     protected $table = 'motorbikes';
     protected $fillable = [        
         'brand_id',
-        'color_id',
         'owner_id',
         'year',
         'plate',

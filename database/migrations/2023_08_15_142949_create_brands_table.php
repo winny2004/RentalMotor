@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('country');
             $table->string('founded');
-            $table->string('logo');
+            $table->string('year');
             $table->timestamps();
         });
     }
