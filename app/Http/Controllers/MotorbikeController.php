@@ -56,6 +56,9 @@ class MotorbikeController extends Controller
      */
     public function show(string $id)
     {
+        if (!auth()->check()) {
+            return redirect('/login');
+        }
         $motorbike = Motorbike::find($id);
         return view('motorbikes.show',['motorbikes' => $motorbike]);
     }
