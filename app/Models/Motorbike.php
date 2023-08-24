@@ -14,6 +14,7 @@ class Motorbike extends Model
         'owner_id',
         'year',
         'plate',
+       
     ];
     public function brand()
     {
@@ -27,4 +28,5 @@ class Motorbike extends Model
     {
         return $this->belongsToMany(Color::class);
     }
+
 }

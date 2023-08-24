@@ -1,11 +1,9 @@
 
-
 <ol style="margin-left: 5rem; margin-right:5rem" class="list-group list-group-numbered">
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body>
   <div class="flex items-center justify-center h-screen">
