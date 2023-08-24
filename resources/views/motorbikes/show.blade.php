@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-12">
     <h1>Details for Motorbike</h1>
-      <p><a href="{'motorbikes.index'}">Back to all motorbikes</a></p>
+      <p><a href="/motorbikes">Back to all motorbikes</a></p>
       <table class="table table-striped">
         <tbody>
           <tr>

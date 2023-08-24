@@ -13,6 +13,9 @@ class MotorbikeController extends Controller
      */
     public function index()
     {
+        if (!auth()->check()) {
+            return redirect('/login');
+        }
             $motorbike = Motorbike::all();
             return view('motorbikes.index', ['motorbikes' => $motorbike]);
       
@@ -62,6 +65,9 @@ class MotorbikeController extends Controller
      */
     public function edit(string $id)
     {
+        if (!auth()->check()) {
+            return redirect('/login');
+        }
         $color = Color::all();
         $owner = Owner::all();
         $brand = Brand::all();
@@ -89,6 +95,9 @@ class MotorbikeController extends Controller
      */
     public function destroy(string $id)
     {
+        if (!auth()->check()) {
+            return redirect('/login');
+        }
             $motorbike = Motorbike::find($id);
         $motorbike->delete();
         return redirect()->route('motorbikes.index');

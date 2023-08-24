@@ -20,12 +20,11 @@ use App\Http\Controllers\AuthenticateController;
 Route::get('/', function () {
     return view('layouts.app');
 });
-
+Route::get('/motorbikes', [MotorbikeController::class, 'motorbikesIndex'])->name('motorbikes');
 Route::resource('/motorbikes', MotorbikeController::class);
 Route::resource('/brands', BrandController::class);
 Route::resource('/colors', ColorController::class);
 Route::resource('/owners', OwnerController::class);
-
 Route::get('login', [AuthenticateController::class, 'loginIndex'])->name('login');
 
 Route::post('login', [AuthenticateController::class, 'login']);

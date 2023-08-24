@@ -22,11 +22,10 @@
         </div>
         <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-md transition duration-300">Login</button>
       </form>
+      Do you have account? <a  href="/register" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-md transition duration-300   "> Register</a>
     </div>
   </div>
-  <style>
-    
-  </style>
+
 </body>
 </html>
 </ol>
