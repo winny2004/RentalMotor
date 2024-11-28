@@ -8,7 +8,7 @@
 <body>
   <div class="flex items-center justify-center h-screen">
     <div class="w-96">
-      <h2 style="color: red" class="text-2xl text-center mb-8 ">Login</h2>
+      <h2 style="color: red" class="text-2xl text-center mb-8 ">Masuk</h2>
       <form action="/login" method="post">
         
         @csrf
